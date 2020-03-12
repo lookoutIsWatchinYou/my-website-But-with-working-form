@@ -51,7 +51,9 @@ router.post("/", [
 
      console.log("the name " + name)
 var transporter = nodemailer.createTransport({
+  
   service: 'gmail',
+  
   auth: {
          user: process.env.USER,
          pass: process.env.PASS
