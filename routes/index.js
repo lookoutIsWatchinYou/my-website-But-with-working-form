@@ -1,5 +1,5 @@
 var express = require('express');
-require('dotenv').config()
+require('env').config()
 //const expressSanitizer = require('express-sanitizer');
 
 var router = express.Router();
