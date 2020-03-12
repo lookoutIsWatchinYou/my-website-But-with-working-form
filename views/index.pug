@@ -1,0 +1,82 @@
+doctype html
+head
+  script(src="https://code.jquery.com/jquery-1.9.1.min.js")
+  link(href='https://fonts.googleapis.com/css?family=Lobster|Ropa+Sans|Sigmar+One&display=swap', rel='stylesheet')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+.head
+  //
+    - <canvas class ="animation">
+    </canvas> -
+  h1.main--heading
+    | Frazer
+    | Watson 
+    span.highlighter
+      | Web
+      | Developer
+  .main-p
+    .main-p-inside--box
+      a(href='#projects') View My Work
+main.firstMain
+  nav#projects.divideNav
+    ul.divideNav--ul
+      li.stayHome
+        a(href='#home') Home 
+      li
+        a(href='#about') About 
+      li
+        a(href='#contact') Contact 
+      li
+        a(href='#projects') Portfolio 
+  .portfolio
+    .project
+      h2 Naughts and Crosses
+      a(href='tictactoe/tictactoe.html')
+        img(src='images/naughts.png')
+    .project
+      h2 Node js
+      a(href='https://intense-reaches-56617.herokuapp.com/catalog')
+        img(src='images/darwenLibrary.png')
+    .project
+      h2 Website with CMS
+      img(src='images/project.png')
+    .project
+      h2 Draughts
+      img(src='images/project.png')
+  .bottom
+    h2#about About
+    .bottom-img
+      img(src='images/project.png')
+    p Front end Web Developer based in the Uk.
+    p  Passion for learning javascript and new programming concepts.
+    h2#contact Contact Form
+    p(id="success").success
+    ul(id="errors").errors
+
+    form.contact--form(action='', method='post')
+    
+      label(for='name') Enter your name:
+      input( id ="name" type='text', name='name' )
+      label(for='email') Enter your email:
+      input(type='text', name='email' id = "email" )
+      label(for='message') Your Message:
+      input(type='text', name='message' id = "message")
+      input(type='submit')#target
+
+          
+
+footer.footer
+  .footer-break
+    span.footer-span
+      a(href='#home') Home
+    span.footer-span
+      a(href='#projects') Portfolio
+    span.footer-span
+      a(href='#about') About
+  break
+  .footer-break
+    span.footer-span
+      | Frazer Watson &copy;2019
+script(src='javascripts/anime.min.js')
+script(type='module', src='javascripts/main.js')
