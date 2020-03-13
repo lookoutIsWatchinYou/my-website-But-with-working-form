@@ -2,12 +2,14 @@
 
 //learning ajax probably use jquery to grab error messages better
 //jQuery getJSON() Method
+var successMsg = $('#success');
+var  errorsContainer = $('#errors');
+
+successMsg.hide();
+errorsContainer.hide();
 
 $("#target").click(function(){
     event.preventDefault()
-  var  errorsContainer = $('#errors');
-  var successMsg = $('#success');
-
     $.ajax({
         
         

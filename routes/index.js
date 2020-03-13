@@ -13,7 +13,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frazer Portfolio' });
 
 });
+router.get('/tictactoe', function(req, res, next) {
+  res.render('tictactoe', { title: 'Frazer Portfolio Tic Tac Toe' });
 
+});
 
 
 router.post("/", [

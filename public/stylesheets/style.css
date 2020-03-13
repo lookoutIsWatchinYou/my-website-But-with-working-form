@@ -10,6 +10,7 @@ body, html{
     margin:0;
     padding:0;
 }
+/*form styling */
 .errors{
   color:red;
   display:flex;
@@ -28,6 +29,36 @@ body, html{
   font-size: 20px;
   font-weight: bold;
 }
+/*
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms
+need to do this suck right now
+*/
+textarea{
+  padding:12px;
+}
+.contact--form{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:20px;
+  align-self: center;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 2.2vh;
+max-width: 200px;
+justify-content: space-between;
+
+}
+.contact--form input{
+  display:flex;
+  flex-direction: row;
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+
+/* */
 .demo-content{
   position: absolute; ;
   top:0;
@@ -302,21 +333,7 @@ color:white;
 font-family: 'Lobster', cursive;
 min-height: 200px;
 }
-.contact--form{
-  display: flex;
-  flex-direction: column;
-  padding:5px;
-  justify-content: center;
-  align-self: center;
-  max-width: 400px;
 
-}
-.contact--form input{
-  font-size: 2.2vh;
-  padding:5px;
-  font-family: 'Ropa Sans', sans-serif;
-
-}
 .footer-break{
 margin-top: 20px;
 }
