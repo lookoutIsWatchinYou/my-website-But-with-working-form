@@ -7,7 +7,7 @@ const { check,validationResult } = require('express-validator/check');
 var nodemailer = require('nodemailer');
 
 var emailVal = require("email-validator");
-
+var Message = require("../models/messages")
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frazer Portfolio' });
@@ -46,21 +46,41 @@ router.post("/", [
       var name = req.body.name;
       var email = req.body.email;
       var message = req.body.message;
+
+console.log(typeof name ==="string");  
+console.log(typeof email ==="string");  
+console.log(typeof message ==="string");  
+
+
+    var storedmessage = new Message({
+        name:name,
+        email:email,
+        message:message
+      })
+      console.log(storedmessage);
+
       // Data from form is valid.
       console.log(" Is valid data");
 
      console.log("the name " + name)
+     storedmessage.save(function (err) {
+      if (err) { return next(err); }
+      console.log("success sending to db?")
+         //successful - redirect to new book record.
+      });
+
+
 var transporter = nodemailer.createTransport({
   
   service: 'gmail',
   
   auth: {
     type: "login",
-         user: process.env.USER,
-         pass: process.env.PASS
+    user: process.env.USER,
+    pass: process.env.PASS
      }
  });
-
+console.log("sending mail")
  var mailOptions = {
   from:  email,
   to:  process.env.USER,

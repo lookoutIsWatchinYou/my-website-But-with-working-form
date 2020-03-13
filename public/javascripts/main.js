@@ -5,6 +5,8 @@
 
 $("#target").click(function(){
     event.preventDefault()
+  var  errorsContainer = $('#errors');
+  var successMsg = $('#success');
 
     $.ajax({
         
@@ -17,21 +19,25 @@ $("#target").click(function(){
           email: $('#email').val(),
           message: $('#message').val(),
         },
+        
         success: function () {
-          var successMsg = $('#success');
           successMsg.text("");//clears it
+          successMsg.show();
+
           console.log(successMsg);
           successMsg.text("Your submission was successful!")
+          errorsContainer.hide()
           alert('Your submission was successful');
+
         },
         error: function (data) {
-          var errorsContainer = $('#errors');
 
             alert('Your submission was bad');
             var errors = JSON.parse(data.responseText);
-             errorsContainer = $('#errors');
             errorsContainer.innerHTML = '';
             var errorsList = '';
+            successMsg.hide()
+            errorsContainer.show();
             if(errors.length>1){
             for (var i = 0; i < errors.length; i++) {
               errorsList += '<li>' + errors[i].msg + '</li>';
