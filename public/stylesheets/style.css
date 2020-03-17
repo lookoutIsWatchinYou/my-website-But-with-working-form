@@ -33,7 +33,23 @@ body, html{
 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms
 need to do this suck right now
+
 */
+input[type=submit]{
+  border: none;
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  margin: 20px 40px;
+  cursor: pointer;
+  background-color:#ffa600;
+color: white;
+display: flex;
+align-self: center;
+font-size: 20px;
+font-family: 'Lobster', cursive;
+border-radius: 8px;
+}
 textarea{
   padding:12px;
 }
@@ -50,11 +66,15 @@ max-width: 200px;
 justify-content: space-between;
 
 }
-.contact--form input{
+.contact--form textarea{
   display:flex;
   flex-direction: row;
-  flex: 1 0 120px;
-  max-width: 220px;
+  color:orange;
+
+}
+
+#message{
+  padding: 20px;
 }
 
 
@@ -420,14 +440,6 @@ body{
   max-width:600px
       }
 
-      .contact--form{
-padding:10px;
-      }
-      .contact--form input{
-        padding:10px;
-        margin-bottom: 5px;
-
-      }
 
   }
   @media only screen and (min-width: 1600px) {

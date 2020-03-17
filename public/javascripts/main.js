@@ -26,21 +26,18 @@ $("#target").click(function(){
           successMsg.text("");//clears it
           successMsg.show();
 
-          console.log(successMsg);
-          successMsg.text("Your submission was successful!")
-          errorsContainer.hide()
-          alert('Your submission was successful');
+          successMsg.text("Your submission was successful!");
+          errorsContainer.hide();
 
         },
         error: function (data) {
 
-            alert('Your submission was bad');
             var errors = JSON.parse(data.responseText);
             errorsContainer.innerHTML = '';
             var errorsList = '';
-            successMsg.hide()
+            successMsg.hide();
             errorsContainer.show();
-            if(errors.length>1){
+            if(errors.length>0){
             for (var i = 0; i < errors.length; i++) {
               errorsList += '<li>' + errors[i].msg + '</li>';
             }
