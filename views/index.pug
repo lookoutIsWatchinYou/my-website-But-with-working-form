@@ -5,7 +5,7 @@ head
   link(rel='stylesheet', href='/stylesheets/style.css')
 
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-.head
+.head#home
   //
     - <canvas class ="animation">
     </canvas> -
@@ -51,8 +51,7 @@ main.firstMain
     p Programmer tring to learn everything: learning Express and trying to make an eccomerce website right now.
     p  Passion for learning javascript and new programming concepts.
     h2#contact Contact Form
-    p(id="success").success
-    ul(id="errors").errors
+ 
 
     form.contact--form(action='', method='post')
     
@@ -62,6 +61,8 @@ main.firstMain
       textArea(type='text', name='email' id = "email" )
       label(for='message') Your Message:
       textArea(type='text', name='message' id = "message")
+      p(id="success").success
+      ul(id="errors").errors
       input(type='submit')#target
 
           
