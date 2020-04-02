@@ -52,7 +52,8 @@ border-radius: 8px;
 }
 textarea{
   padding:12px;
-  
+  resize: none;
+
 }
 .contact--form{
 
@@ -68,21 +69,26 @@ justify-content: space-between;
 
 }
 .contact--form textarea{
+
   display:flex;
   flex-direction: row;
   color:orange;
-
+width:300px
 }
 label{
   padding:20px;
 }
-#message{
+.formMessage{
 
-  width: 300px;
   height:100px;
 }
-
-
+.formName{
+  
+  height:20px;
+}
+.formEmail{
+  height:20px;
+}
 /* */
 .demo-content{
   position: absolute; ;
@@ -402,7 +408,7 @@ body{
   
     }
     .contact--form{
-      max-width: 300px;
+      min-width: 300px;
       }
   }
   
