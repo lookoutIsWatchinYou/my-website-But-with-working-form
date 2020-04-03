@@ -17,9 +17,9 @@ $("#target").click(function(){
         type: 'POST',
         cache: false,
         data: {
-          name: $('#name').val(),
-          email: $('#email').val(),
-          message: $('#message').val(),
+          name: $('formName').val(),
+          email: $('formEmail').val(),
+          message: $('formMessage').val(),
         },
         
         success: function () {
