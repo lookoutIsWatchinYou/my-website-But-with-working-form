@@ -23,6 +23,7 @@ $("#target").click(function(){
         },
         
         success: function () {
+          console.log("HEy success")
           successMsg.text("");//clears it
           successMsg.show();
 
@@ -31,6 +32,7 @@ $("#target").click(function(){
 
         },
         error: function (data) {
+          console.log("HEy fail")
 
             var errors = JSON.parse(data.responseText);
             errorsContainer.innerHTML = '';
